@@ -137,20 +137,20 @@
             align-items: start;
         }
 
-        /* Sticky Dark Ad Sidebars (2 Stacked 160x600 Banners Per Side) */
+        /* Dark Ad Sidebars (2 Stacked 160x600 Banners Per Side) */
         .ad-sidebar {
             width: 160px;
-            position: sticky;
-            top: 24px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 24px;
+            flex-shrink: 0;
         }
 
         .ad-unit-vertical {
             width: 160px;
             height: 600px;
             min-height: 600px;
+            max-height: 600px;
             flex-shrink: 0;
             background: rgba(22, 22, 28, 0.6);
             backdrop-filter: blur(20px);
@@ -163,6 +163,7 @@
             justify-content: center;
             padding: 0;
             overflow: hidden;
+            position: relative;
             text-align: center;
             color: var(--text-tertiary);
             font-size: 11px;
@@ -175,6 +176,8 @@
             border: none;
             display: block;
             margin: 0 auto;
+            max-width: 160px;
+            max-height: 600px;
         }
 
         .ad-unit-vertical:hover {
@@ -950,11 +953,17 @@
 
             <!-- Left Banner #2 -->
             <div class="ad-unit-vertical">
-                <span class="ad-tag">Advertisement</span>
-                <div>Adsterra / AdSense Left Banner #2</div>
-                <div class="ad-size">160 × 600</div>
-                <!-- Paste Adsterra Left Banner 2 script below -->
-                <!-- <script type="text/javascript"> ... </script> -->
+                <!-- ADSTERRA / ADSENSE LEFT BANNER #2 -->
+                <script>
+                  atOptions = {
+                    'key' : '94c39cbb2ea5448945eb8eb2ca06f6ac',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highrevenueformat.com/94c39cbb2ea5448945eb8eb2ca06f6ac/invoke.js"></script>
             </div>
         </aside>
 
@@ -1069,11 +1078,17 @@
 
             <!-- Right Banner #2 -->
             <div class="ad-unit-vertical">
-                <span class="ad-tag">Advertisement</span>
-                <div>Adsterra / AdSense Right Banner #2</div>
-                <div class="ad-size">160 × 600</div>
-                <!-- Paste Adsterra Right Banner 2 script below -->
-                <!-- <script type="text/javascript"> ... </script> -->
+                <!-- ADSTERRA / ADSENSE RIGHT BANNER #2 -->
+                <script>
+                  atOptions = {
+                    'key' : '94c39cbb2ea5448945eb8eb2ca06f6ac',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highrevenueformat.com/94c39cbb2ea5448945eb8eb2ca06f6ac/invoke.js"></script>
             </div>
         </aside>
     </div>
