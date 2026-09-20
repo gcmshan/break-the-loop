@@ -155,19 +155,26 @@
             background: rgba(22, 22, 28, 0.6);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1.5px dashed var(--border-subtle);
+            border: 1px dashed var(--border-subtle);
             border-radius: var(--radius-lg);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 16px;
+            padding: 0;
+            overflow: hidden;
             text-align: center;
             color: var(--text-tertiary);
             font-size: 11px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             transition: all 0.3s ease;
+        }
+
+        .ad-unit-vertical iframe {
+            border: none;
+            display: block;
+            margin: 0 auto;
         }
 
         .ad-unit-vertical:hover {
@@ -211,7 +218,7 @@
             background: rgba(22, 22, 28, 0.6);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1.5px dashed var(--border-subtle);
+            border: 1px dashed var(--border-subtle);
             border-radius: var(--radius-lg);
             display: flex;
             flex-direction: column;
@@ -220,8 +227,17 @@
             text-align: center;
             color: var(--text-tertiary);
             font-size: 11px;
-            padding: 14px 20px;
+            padding: 0;
+            overflow: hidden;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
             transition: all 0.3s ease;
+        }
+
+        .ad-unit-banner iframe {
+            border: none;
+            display: block;
+            margin: 0 auto;
         }
 
         .ad-unit-banner:hover {
@@ -919,11 +935,17 @@
         <aside class="ad-sidebar" aria-label="Advertisement Sidebar Left">
             <!-- Left Banner #1 -->
             <div class="ad-unit-vertical">
-                <span class="ad-tag">Advertisement</span>
-                <div>Adsterra / AdSense Left Banner #1</div>
-                <div class="ad-size">160 × 600</div>
-                <!-- Paste Adsterra Left Banner 1 script below -->
-                <!-- <script type="text/javascript"> ... </script> -->
+                <!-- ADSTERRA / ADSENSE LEFT BANNER #1 -->
+                <script>
+                  atOptions = {
+                    'key' : '94c39cbb2ea5448945eb8eb2ca06f6ac',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highrevenueformat.com/94c39cbb2ea5448945eb8eb2ca06f6ac/invoke.js"></script>
             </div>
 
             <!-- Left Banner #2 -->
@@ -959,11 +981,17 @@
 
             <!-- Top Banner Ad Placeholder -->
             <section class="ad-unit-banner banner-top" aria-label="Top Banner Advertisement">
-                <span class="ad-tag">Advertisement</span>
-                <div>Adsterra / AdSense Leaderboard Top Banner (Paste Code Here)</div>
-                <div class="ad-size">728 × 90 Responsive</div>
-                <!-- Paste Adsterra Top Banner script below -->
-                <!-- <script type="text/javascript"> ... </script> -->
+                <!-- ADSTERRA / ADSENSE LEADERBOARD TOP BANNER -->
+                <script>
+                  atOptions = {
+                    'key' : 'b480e5fc7d6a8b5550589c6053ac45ec',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highrevenueformat.com/b480e5fc7d6a8b5550589c6053ac45ec/invoke.js"></script>
             </section>
 
             <!-- Glowing 3D Dark Mystery Box -->
@@ -1008,11 +1036,17 @@
 
             <!-- Bottom Banner Ad Placeholder -->
             <section class="ad-unit-banner banner-bottom" aria-label="Bottom Banner Advertisement">
-                <span class="ad-tag">Advertisement</span>
-                <div>Adsterra / AdSense Leaderboard Bottom Banner (Paste Code Here)</div>
-                <div class="ad-size">728 × 90 Responsive</div>
-                <!-- Paste Adsterra Bottom Banner script below -->
-                <!-- <script type="text/javascript"> ... </script> -->
+                <!-- ADSTERRA / ADSENSE LEADERBOARD BOTTOM BANNER -->
+                <script>
+                  atOptions = {
+                    'key' : 'b480e5fc7d6a8b5550589c6053ac45ec',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highrevenueformat.com/b480e5fc7d6a8b5550589c6053ac45ec/invoke.js"></script>
             </section>
         </main>
 
@@ -1020,11 +1054,17 @@
         <aside class="ad-sidebar" aria-label="Advertisement Sidebar Right">
             <!-- Right Banner #1 -->
             <div class="ad-unit-vertical">
-                <span class="ad-tag">Advertisement</span>
-                <div>Adsterra / AdSense Right Banner #1</div>
-                <div class="ad-size">160 × 600</div>
-                <!-- Paste Adsterra Right Banner 1 script below -->
-                <!-- <script type="text/javascript"> ... </script> -->
+                <!-- ADSTERRA / ADSENSE RIGHT BANNER #1 -->
+                <script>
+                  atOptions = {
+                    'key' : '94c39cbb2ea5448945eb8eb2ca06f6ac',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highrevenueformat.com/94c39cbb2ea5448945eb8eb2ca06f6ac/invoke.js"></script>
             </div>
 
             <!-- Right Banner #2 -->
