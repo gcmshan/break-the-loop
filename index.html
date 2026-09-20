@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break The Loop - Instant Porn Addiction & NoFap Reset Tool</title>
+    <meta name="description" content="Overcome adult content cravings and PMO loops in 60 seconds with science-backed somatic micro-actions. Rewire your dopamine and regain mental focus instantly.">
+    <meta name="keywords" content="quit porn addiction, NoFap streak reboot, PMO recovery, stop watching adult content, dopamine detox tool, urge surfing exercises, instant habit reset">
+    <meta name="author" content="Break The Loop">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b0b0e">
+
+    <!-- Open Graph / Social Sharing (Discreet, Clean & Privacy-Focused) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Break The Loop - Instant Dopamine & Habit Reset Tool">
+    <meta property="og:description" content="Interrupt compulsive urges and reset mental focus in 60 seconds with science-backed micro-actions. Free, interactive, and private.">
+    <meta property="og:site_name" content="Break The Loop">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Break The Loop - Instant Dopamine & Habit Reset Tool">
+    <meta name="twitter:description" content="Interrupt compulsive urges and reset mental focus in 60 seconds with science-backed micro-actions. Free, interactive, and private.">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎁</text></svg>">
+
+    <style>
+        /* -------------------------------------------------------------
+           1. Apple Pro Dark Mode Design System & Design Tokens
+        -------------------------------------------------------------- */
+        :root {
+            --bg-base: #0b0b0e;
+            --bg-surface: #121216;
+            --bg-card: rgba(28, 28, 34, 0.72);
+            --bg-card-hover: rgba(36, 36, 44, 0.88);
+            --border-card: rgba(255, 255, 255, 0.08);
+            --border-card-hover: rgba(0, 242, 254, 0.35);
+            --border-subtle: #2c2c36;
+            
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --text-tertiary: #71717a;
+            
+            --electric-blue: #0071e3;
+            --electric-cyan: #00f2fe;
+            --soft-violet: #9d4edd;
+            --neon-emerald: #10b981;
+            
+            --radius-xl: 24px;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-pill: 9999px;
+            
+            --shadow-card: 0 20px 50px -10px rgba(0, 0, 0, 0.7), 0 0 1px 1px rgba(255, 255, 255, 0.06);
+            --shadow-glow-blue: 0 0 45px -5px rgba(0, 113, 227, 0.45);
+            --shadow-glow-cyan: 0 0 45px -5px rgba(0, 242, 254, 0.35);
+            --shadow-glow-cta: 0 8px 30px rgba(0, 113, 227, 0.5), 0 0 20px rgba(157, 78, 221, 0.35);
+            
+            --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: var(--font-stack);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(0, 113, 227, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 85% 20%, rgba(157, 78, 221, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 50% 85%, rgba(0, 242, 254, 0.08) 0%, transparent 55%),
+                linear-gradient(180deg, #0b0b0e 0%, #121216 100%);
+            background-attachment: fixed;
+        }
+
+        /* Ambient Glow Blobs in Background */
+        .ambient-glow {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.5;
+        }
+
+        .glow-top-left {
+            width: 450px;
+            height: 450px;
+            top: -100px;
+            left: -100px;
+            background: radial-gradient(circle, rgba(0, 113, 227, 0.3) 0%, transparent 70%);
+        }
+
+        .glow-top-right {
+            width: 500px;
+            height: 500px;
+            top: 50px;
+            right: -150px;
+            background: radial-gradient(circle, rgba(157, 78, 221, 0.25) 0%, transparent 70%);
+        }
+
+        /* Particle Overlay Canvas */
+        #particleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* -------------------------------------------------------------
+           2. 3-Column Responsive Grid Architecture
+        -------------------------------------------------------------- */
+        .layout-wrapper {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 160px minmax(0, 720px) 160px;
+            gap: 32px;
+            width: 100%;
+            max-width: 1260px;
+            padding: 36px 20px 80px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        /* Sticky Dark Ad Sidebars (2 Stacked 160x600 Banners Per Side) */
+        .ad-sidebar {
+            width: 160px;
+            position: sticky;
+            top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .ad-unit-vertical {
+            width: 160px;
+            height: 600px;
+            min-height: 600px;
+            flex-shrink: 0;
+            background: rgba(22, 22, 28, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1.5px dashed var(--border-subtle);
+            border-radius: var(--radius-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            text-align: center;
+            color: var(--text-tertiary);
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .ad-unit-vertical:hover {
+            border-color: var(--electric-cyan);
+            background: rgba(28, 28, 36, 0.85);
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.15);
+        }
+
+        .ad-tag {
+            font-size: 10px;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+        }
+
+        .ad-size {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-top: 6px;
+        }
+
+        /* Center Column */
+        .center-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* Dark Banner Ads (Top & Bottom) */
+        .ad-unit-banner {
+            width: 100%;
+            min-height: 90px;
+            background: rgba(22, 22, 28, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1.5px dashed var(--border-subtle);
+            border-radius: var(--radius-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-tertiary);
+            font-size: 11px;
+            padding: 14px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .ad-unit-banner:hover {
+            border-color: var(--electric-blue);
+            background: rgba(28, 28, 36, 0.85);
+            box-shadow: 0 0 30px rgba(0, 113, 227, 0.2);
+        }
+
+        .banner-top {
+            margin-bottom: 30px;
+        }
+
+        .banner-bottom {
+            margin-top: 36px;
+        }
+
+        /* -------------------------------------------------------------
+           3. Hero Header & Breathtaking Animated Neon Title
+        -------------------------------------------------------------- */
+        .app-header {
+            text-align: center;
+            margin-bottom: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Title Halo Backdrop Effect */
+        .title-glow-halo {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            height: 100px;
+            background: radial-gradient(ellipse, rgba(0, 242, 254, 0.28) 0%, rgba(157, 78, 221, 0.25) 50%, transparent 75%);
+            filter: blur(35px);
+            pointer-events: none;
+            z-index: -1;
+            animation: haloPulse 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes haloPulse {
+            0% { opacity: 0.6; transform: translate(-50%, -50%) scale(0.9); }
+            100% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+        }
+
+        /* Animated Neon Gradient Title (Clickable Home Button) */
+        h1.app-title {
+            font-size: clamp(34px, 5vw, 50px);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            line-height: 1.12;
+            margin-bottom: 12px;
+            background: linear-gradient(
+                120deg,
+                var(--electric-blue) 0%,
+                var(--electric-cyan) 30%,
+                var(--soft-violet) 70%,
+                var(--electric-blue) 100%
+            );
+            background-size: 250% 250%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: neonGradientShift 7s linear infinite;
+            text-shadow: 0 0 40px rgba(0, 242, 254, 0.35);
+            cursor: pointer;
+            display: inline-block;
+            user-select: none;
+            transition: transform 0.3s var(--ease-spring), text-shadow 0.3s ease, filter 0.3s ease;
+        }
+
+        h1.app-title:hover {
+            transform: scale(1.03);
+            text-shadow: 0 0 55px rgba(0, 242, 254, 0.65), 0 0 28px rgba(157, 78, 221, 0.5);
+            filter: brightness(1.15);
+        }
+
+        h1.app-title:active {
+            transform: scale(0.985);
+        }
+
+        .app-header:has(h1.app-title:hover) .title-glow-halo {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.25);
+            filter: blur(45px);
+        }
+
+        @keyframes neonGradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        p.app-subtitle {
+            font-size: clamp(15px, 2.2vw, 17px);
+            color: var(--text-secondary);
+            max-width: 530px;
+            line-height: 1.5;
+            letter-spacing: -0.2px;
+            margin-bottom: 18px;
+        }
+
+        /* Stats Pill Group */
+        .status-pill-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Sleek Animated Level Badge */
+        .level-badge {
+            background: rgba(18, 18, 26, 0.8);
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            color: #ffffff;
+            padding: 7px 18px;
+            border-radius: var(--radius-pill);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.18), inset 0 0 10px rgba(0, 113, 227, 0.2);
+            transition: all 0.3s var(--ease-spring);
+        }
+
+        .level-badge .neon-pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--electric-cyan);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--electric-cyan);
+            animation: neonPulse 2s infinite;
+        }
+
+        @keyframes neonPulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.8); }
+            70% { box-shadow: 0 0 0 8px rgba(0, 242, 254, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); }
+        }
+
+        .stat-badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-secondary);
+            padding: 7px 14px;
+            border-radius: var(--radius-pill);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .reset-badge-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text-secondary);
+            padding: 7px 15px;
+            border-radius: var(--radius-pill);
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s var(--ease-spring);
+            user-select: none;
+        }
+
+        .reset-badge-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(0, 242, 254, 0.45);
+            color: #ffffff;
+            box-shadow: 0 0 14px rgba(0, 242, 254, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .reset-badge-btn:active {
+            transform: scale(0.96);
+        }
+
+        /* -------------------------------------------------------------
+           4. Glowing 3D Dark Mystery Box Component
+        -------------------------------------------------------------- */
+        .box-container-outer {
+            width: 100%;
+            perspective: 1200px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mystery-box-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(28px) saturate(180%);
+            -webkit-backdrop-filter: blur(28px) saturate(180%);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-xl);
+            padding: 56px 36px 46px;
+            width: 100%;
+            box-shadow: var(--shadow-card);
+            cursor: pointer;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg) scale(1);
+            transition: transform 0.15s ease-out, box-shadow 0.3s ease, border-color 0.3s ease;
+            user-select: none;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Interactive Dynamic Sheen / Glare */
+        .card-glare {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: var(--radius-xl);
+            background: radial-gradient(
+                circle 420px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                rgba(0, 242, 254, 0.15),
+                rgba(157, 78, 221, 0.08) 40%,
+                transparent 75%
+            );
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mystery-box-card:hover .card-glare {
+            opacity: 1;
+        }
+
+        .mystery-box-card:hover {
+            box-shadow: var(--shadow-glow-cyan), var(--shadow-card);
+            border-color: var(--border-card-hover);
+        }
+
+        .mystery-box-card:active {
+            transform: scale(0.985) !important;
+        }
+
+        /* Glowing Box Icon Halo */
+        .box-gift-wrapper {
+            position: relative;
+            margin-bottom: 22px;
+            transform: translateZ(45px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box-gift-halo {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.35) 0%, rgba(157, 78, 221, 0.25) 45%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(16px);
+            z-index: 1;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .mystery-box-card:hover .box-gift-halo {
+            transform: scale(1.35);
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.5) 0%, rgba(157, 78, 221, 0.35) 45%, transparent 70%);
+        }
+
+        .box-icon {
+            font-size: 82px;
+            line-height: 1;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s var(--ease-spring);
+            filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.6));
+            animation: darkIdleFloat 3.8s ease-in-out infinite;
+        }
+
+        @keyframes darkIdleFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(1.5deg); }
+        }
+
+        /* Continuous subtle shake on hover */
+        .mystery-box-card:hover .box-icon {
+            animation: darkGiftExcited 0.65s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+        }
+
+        @keyframes darkGiftExcited {
+            0% { transform: rotate(0deg) scale(1.1) translateY(-4px); }
+            20% { transform: rotate(-8deg) scale(1.14) translateY(-7px); }
+            40% { transform: rotate(8deg) scale(1.14) translateY(-7px); }
+            60% { transform: rotate(-6deg) scale(1.12) translateY(-5px); }
+            80% { transform: rotate(6deg) scale(1.12) translateY(-5px); }
+            100% { transform: rotate(0deg) scale(1.1) translateY(-4px); }
+        }
+
+        .box-title {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.4px;
+            color: #ffffff;
+            margin-bottom: 8px;
+            transform: translateZ(30px);
+        }
+
+        .box-hint {
+            font-size: 14px;
+            color: var(--text-secondary);
+            transform: translateZ(20px);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .box-hint-icon {
+            font-size: 12px;
+            color: var(--electric-cyan);
+            text-shadow: 0 0 8px var(--electric-cyan);
+        }
+
+        /* Dramatic Box Opening Transition */
+        .box-opening {
+            pointer-events: none;
+            animation: darkBoxOpenSequence 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+        }
+
+        @keyframes darkBoxOpenSequence {
+            0% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+                filter: brightness(1) drop-shadow(0 0 0px var(--electric-cyan));
+            }
+            35% {
+                transform: scale(1.18) rotate(4deg);
+                opacity: 1;
+                filter: brightness(1.4) drop-shadow(0 0 35px var(--electric-cyan));
+            }
+            70% {
+                transform: scale(1.25) rotate(-3deg);
+                opacity: 0.9;
+                filter: brightness(1.7) drop-shadow(0 0 50px var(--soft-violet));
+            }
+            100% {
+                transform: scale(0.65) translateY(-35px);
+                opacity: 0;
+                filter: brightness(2);
+            }
+        }
+
+        /* -------------------------------------------------------------
+           5. Revealed Action Plan (Sleek Dark Glass Cards)
+        -------------------------------------------------------------- */
+        .steps-container {
+            display: none;
+            width: 100%;
+            background: var(--bg-card);
+            backdrop-filter: blur(28px) saturate(180%);
+            -webkit-backdrop-filter: blur(28px) saturate(180%);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-xl);
+            padding: 38px 34px 34px;
+            box-shadow: var(--shadow-card);
+            position: relative;
+            transform-origin: center top;
+        }
+
+        .steps-container.is-visible {
+            display: block;
+            animation: cardSpringReveal 0.65s var(--ease-spring) forwards;
+        }
+
+        @keyframes cardSpringReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(28px) scale(0.96);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .steps-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .steps-header-left h2 {
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: -0.6px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .steps-header-left h2 .accent-icon {
+            color: var(--electric-cyan);
+            text-shadow: 0 0 10px var(--electric-cyan);
+        }
+
+        .steps-header-left p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        /* Progress tracker */
+        .progress-pill {
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #34d399;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: var(--radius-pill);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            height: fit-content;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        /* Ordered Step Cards */
+        .steps-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+
+        .step-item {
+            background: rgba(22, 22, 28, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: var(--radius-lg);
+            padding: 18px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            transition: all 0.25s ease;
+            position: relative;
+            opacity: 0;
+            transform: translateY(16px);
+            cursor: pointer;
+        }
+
+        .step-item:hover {
+            background: rgba(30, 30, 38, 0.85);
+            border-color: rgba(0, 242, 254, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 242, 254, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .step-item.is-completed {
+            background: rgba(16, 185, 129, 0.06);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .step-item.is-completed .step-title {
+            text-decoration: line-through;
+            color: var(--text-tertiary);
+        }
+
+        .step-item.is-completed .step-desc {
+            opacity: 0.5;
+        }
+
+        /* Staggered entry animation */
+        .steps-container.is-visible .step-item:nth-child(1) { animation: stepItemEnter 0.5s var(--ease-spring) 0.08s forwards; }
+        .steps-container.is-visible .step-item:nth-child(2) { animation: stepItemEnter 0.5s var(--ease-spring) 0.16s forwards; }
+        .steps-container.is-visible .step-item:nth-child(3) { animation: stepItemEnter 0.5s var(--ease-spring) 0.24s forwards; }
+        .steps-container.is-visible .step-item:nth-child(4) { animation: stepItemEnter 0.5s var(--ease-spring) 0.32s forwards; }
+        .steps-container.is-visible .step-item:nth-child(5) { animation: stepItemEnter 0.5s var(--ease-spring) 0.40s forwards; }
+
+        @keyframes stepItemEnter {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Checkbox interaction */
+        .step-checkbox {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: 2px solid #3f3f46;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+            transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .step-item:hover .step-checkbox {
+            border-color: var(--electric-cyan);
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+        }
+
+        .step-item.is-completed .step-checkbox {
+            background: var(--neon-emerald);
+            border-color: var(--neon-emerald);
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+        }
+
+        /* Glowing Accent Tags */
+        .step-category {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: rgba(0, 242, 254, 0.1);
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            color: var(--electric-cyan);
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+        }
+
+        .step-duration {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: rgba(157, 78, 221, 0.12);
+            border: 1px solid rgba(157, 78, 221, 0.25);
+            color: #d8b4fe;
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            color: #ffffff;
+            line-height: 1.35;
+            margin-bottom: 4px;
+            transition: color 0.2s ease;
+        }
+
+        .step-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* -------------------------------------------------------------
+           6. Electric CTA Button & Gamified Loop
+        -------------------------------------------------------------- */
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .next-box-btn {
+            background: linear-gradient(135deg, #0071e3 0%, #005bb5 45%, #9d4edd 100%);
+            background-size: 200% 200%;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 17px 38px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-glow-cta);
+            position: relative;
+            overflow: hidden;
+            animation: ctaShimmer 4s ease infinite;
+        }
+
+        @keyframes ctaShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .next-box-btn:hover {
+            transform: translateY(-2px) scale(1.015);
+            box-shadow: 0 12px 35px rgba(0, 113, 227, 0.65), 0 0 25px rgba(157, 78, 221, 0.5);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .next-box-btn:active {
+            transform: scale(0.985);
+            box-shadow: 0 4px 15px rgba(0, 113, 227, 0.4);
+        }
+
+        .reset-progress-link {
+            background: none;
+            border: none;
+            font-size: 12px;
+            color: var(--text-tertiary);
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: color 0.2s ease;
+        }
+
+        .reset-progress-link:hover {
+            color: var(--text-secondary);
+            text-decoration: underline;
+        }
+
+        /* -------------------------------------------------------------
+           7. Responsive Media Queries
+        -------------------------------------------------------------- */
+        @media (max-width: 1080px) {
+            .layout-wrapper {
+                grid-template-columns: 1fr;
+                max-width: 680px;
+                padding-top: 24px;
+            }
+
+            .ad-sidebar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .layout-wrapper {
+                padding: 18px 14px 60px;
+            }
+
+            .mystery-box-card {
+                padding: 42px 20px 34px;
+                border-radius: 20px;
+            }
+
+            .box-icon {
+                font-size: 68px;
+            }
+
+            .steps-container {
+                padding: 26px 18px 24px;
+                border-radius: 20px;
+            }
+
+            .step-item {
+                padding: 15px 14px;
+                gap: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ambient Glow Blobs -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-top-right"></div>
+
+    <!-- Particle Overlay Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="layout-wrapper">
+        <!-- Left Skyscraper Ad Sidebar (2 Stacked Ads) -->
+        <aside class="ad-sidebar" aria-label="Advertisement Sidebar Left">
+            <!-- Left Banner #1 -->
+            <div class="ad-unit-vertical">
+                <span class="ad-tag">Advertisement</span>
+                <div>Adsterra / AdSense Left Banner #1</div>
+                <div class="ad-size">160 × 600</div>
+                <!-- Paste Adsterra Left Banner 1 script below -->
+                <!-- <script type="text/javascript"> ... </script> -->
+            </div>
+
+            <!-- Left Banner #2 -->
+            <div class="ad-unit-vertical">
+                <span class="ad-tag">Advertisement</span>
+                <div>Adsterra / AdSense Left Banner #2</div>
+                <div class="ad-size">160 × 600</div>
+                <!-- Paste Adsterra Left Banner 2 script below -->
+                <!-- <script type="text/javascript"> ... </script> -->
+            </div>
+        </aside>
+
+        <!-- Main Center Interaction Column -->
+        <main class="center-column">
+            <!-- Hero Header Section -->
+            <header class="app-header">
+                <div class="title-glow-halo"></div>
+
+                <!-- Animated Neon Gradient Heading (Clickable Home Button) -->
+                <h1 class="app-title" onclick="navigateToHome()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigateToHome();}" role="button" tabindex="0" title="Return to Home" aria-label="Break The Loop - Return to Home">Break The Loop</h1>
+                <p class="app-subtitle">Break bad habits instantly with simple 60-second micro-challenges. Tap a box to reset your mind.</p>
+
+                <!-- Dynamic Level Badge & Single Reset Button -->
+                <div class="status-pill-group">
+                    <div class="level-badge" id="levelBadge">
+                        <span id="levelBadgeText">⚡ Level 1</span>
+                    </div>
+                    <button class="reset-badge-btn" onclick="resetToLevelOne()" title="Reset progress back to Level 1">
+                        🔄 Reset Progress
+                    </button>
+                </div>
+            </header>
+
+            <!-- Top Banner Ad Placeholder -->
+            <section class="ad-unit-banner banner-top" aria-label="Top Banner Advertisement">
+                <span class="ad-tag">Advertisement</span>
+                <div>Adsterra / AdSense Leaderboard Top Banner (Paste Code Here)</div>
+                <div class="ad-size">728 × 90 Responsive</div>
+                <!-- Paste Adsterra Top Banner script below -->
+                <!-- <script type="text/javascript"> ... </script> -->
+            </section>
+
+            <!-- Glowing 3D Dark Mystery Box -->
+            <div class="box-container-outer" id="boxContainerOuter">
+                <div class="mystery-box-card" id="mysteryBox" onclick="openBox(event)" role="button" tabindex="0" aria-label="Open Mystery Box">
+                    <div class="card-glare" id="cardGlare"></div>
+                    <div class="box-gift-wrapper">
+                        <div class="box-gift-halo"></div>
+                        <div class="box-icon" id="boxIcon">🎁</div>
+                    </div>
+                    <div class="box-title" id="boxTitle">Tap to Open Mystery Box #1</div>
+                    <div class="box-hint">
+                        <span class="box-hint-icon">✦</span>
+                        <span>Click to reveal your 5-step reset plan</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revealed Action Plan (Sleek Dark Glass Cards) -->
+            <section class="steps-container" id="stepsContainer" aria-live="polite">
+                <div class="steps-header">
+                    <div class="steps-header-left">
+                        <h2 id="stepsHeading">Box #1 Unlocked <span class="accent-icon">⚡</span></h2>
+                        <p>Complete these 5 micro-actions to short-circuit the craving</p>
+                    </div>
+                    <div class="progress-pill" id="completionStatus">
+                        <span id="completedCount">0</span>/5 Done
+                    </div>
+                </div>
+
+                <!-- Dynamic Steps List -->
+                <div class="steps-list" id="stepsList"></div>
+
+                <!-- Gamified Endless CTA Loop -->
+                <div class="cta-container">
+                    <button class="next-box-btn" id="nextBoxBtn" onclick="prepareNextBox()">
+                        <span>Unlock Next Mystery Box</span>
+                        <span style="font-size: 20px;">🎁</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Bottom Banner Ad Placeholder -->
+            <section class="ad-unit-banner banner-bottom" aria-label="Bottom Banner Advertisement">
+                <span class="ad-tag">Advertisement</span>
+                <div>Adsterra / AdSense Leaderboard Bottom Banner (Paste Code Here)</div>
+                <div class="ad-size">728 × 90 Responsive</div>
+                <!-- Paste Adsterra Bottom Banner script below -->
+                <!-- <script type="text/javascript"> ... </script> -->
+            </section>
+        </main>
+
+        <!-- Right Skyscraper Ad Sidebar (2 Stacked Ads) -->
+        <aside class="ad-sidebar" aria-label="Advertisement Sidebar Right">
+            <!-- Right Banner #1 -->
+            <div class="ad-unit-vertical">
+                <span class="ad-tag">Advertisement</span>
+                <div>Adsterra / AdSense Right Banner #1</div>
+                <div class="ad-size">160 × 600</div>
+                <!-- Paste Adsterra Right Banner 1 script below -->
+                <!-- <script type="text/javascript"> ... </script> -->
+            </div>
+
+            <!-- Right Banner #2 -->
+            <div class="ad-unit-vertical">
+                <span class="ad-tag">Advertisement</span>
+                <div>Adsterra / AdSense Right Banner #2</div>
+                <div class="ad-size">160 × 600</div>
+                <!-- Paste Adsterra Right Banner 2 script below -->
+                <!-- <script type="text/javascript"> ... </script> -->
+            </div>
+        </aside>
+    </div>
+
+    <!-- -------------------------------------------------------------
+         JavaScript Engine: State, Actions, Audio & Canvas Particles
+    -------------------------------------------------------------- -->
+    <script>
+        /* --- 1. Scientific Habit Reset Action Pool (25 Actions) --- */
+        const actionPool = [
+            {
+                category: "Somatic Breath",
+                duration: "60s",
+                title: "Double-Inhale Physiological Sigh",
+                desc: "Take two deep nasal inhales back-to-back, followed by an extended, audible mouth exhale. Repeat 5 times to immediately lower autonomic arousal."
+            },
+            {
+                category: "Sensory Scan",
+                duration: "90s",
+                title: "The 5-4-3-2-1 Sensory Grounding",
+                desc: "Anchor yourself: notice 5 things you can see, 4 you can physically feel, 3 you can hear, 2 you can smell, and 1 you can taste."
+            },
+            {
+                category: "Sensory Shock",
+                duration: "30s",
+                title: "Cold Water Face Splash",
+                desc: "Splash freezing cold water across your eyes, forehead, and temples 5 times. Instantly triggers the mammalian dive reflex to crash heart rate and acute arousal."
+            },
+            {
+                category: "Urge Surfing",
+                duration: "90s",
+                title: "Urge Surfing (The 90-Second Wave)",
+                desc: "Observe the physical craving in your chest and stomach without reacting. Acute dopamine cravings peak within 90-180 seconds and naturally collapse if not fed."
+            },
+            {
+                category: "Physical Shock",
+                duration: "45s",
+                title: "15-20 Explosive Push-ups",
+                desc: "Drop immediately and perform 15-20 fast push-ups. Intense physical exertion rapidly redirects blood flow away from arousal centers to large muscle groups."
+            },
+            {
+                category: "Urge Defense",
+                duration: "60s",
+                title: "Phone & Device Quarantine",
+                desc: "Place your phone face down in another room or step away from your computer right now. Eliminating immediate screen proximity breaks 90% of PMO relapses."
+            },
+            {
+                category: "Vision Reset",
+                duration: "60s",
+                title: "Far-Horizon Panoramic Gaze",
+                desc: "Look out a window at the furthest horizon or treetop for 60 seconds without focusing on any single point. Relaxes optic nerve tension."
+            },
+            {
+                category: "Environment",
+                duration: "1 min",
+                title: "The 3-Item Clutter Purge",
+                desc: "Pick up and put away exactly 3 items cluttering your desk. Restoring local visual harmony creates instantaneous cognitive clarity."
+            },
+            {
+                category: "Physical",
+                duration: "45s",
+                title: "Isometric Wall-Sit Burnout",
+                desc: "Sink into a 90-degree wall sit. Hold until your quadriceps shake. Intense somatic sensations override impulsive daydreaming."
+            },
+            {
+                category: "Cognitive",
+                duration: "60s",
+                title: "Urge Exorcism on Paper",
+                desc: "Write down the exact craving or urge you feel right now in 5 words on physical paper, crumble it tightly, and discard it."
+            },
+            {
+                category: "Physical",
+                duration: "45s",
+                title: "20 Fast Jumping Jacks",
+                desc: "Spike your heart rate with 20 quick jumps. Aerobic bursts jolt the prefrontal cortex back into active command."
+            },
+            {
+                category: "Sensory",
+                duration: "30s",
+                title: "Strong Peppermint Reset",
+                desc: "Chew a strong mint gum, drink mint tea, or brush your teeth with mint toothpaste to stimulate the trigeminal nerve."
+            },
+            {
+                category: "Somatic Breath",
+                duration: "60s",
+                title: "Box Breathing (4-4-4-4)",
+                desc: "Inhale 4s, hold full 4s, exhale 4s, hold empty 4s. Used by tactical operators to bring down acute nervous excitation."
+            },
+            {
+                category: "Environment",
+                duration: "45s",
+                title: "Full Window Air Flush",
+                desc: "Open your window wide and draw in 5 slow breaths of cold outdoor air to displace stagnant carbon dioxide buildup."
+            },
+            {
+                category: "Posture",
+                duration: "60s",
+                title: "Chest Opener & Overhead Reach",
+                desc: "Interlace your fingers behind your back, pull shoulders down and back, and lift your chin gently for 3 slow breaths."
+            },
+            {
+                category: "Focus",
+                duration: "60s",
+                title: "Phone Physical Quarantine",
+                desc: "Put your phone facedown inside a drawer or in another room. Eliminate the sensory proximity that triggers auto-pilot loops."
+            },
+            {
+                category: "Physical",
+                duration: "60s",
+                title: "Solid Plank Core Lock",
+                desc: "Hold a forearm plank with glutes squeezed and navel pulled in tight for 45 to 60 seconds."
+            },
+            {
+                category: "Mindset",
+                duration: "45s",
+                title: "1-Page Physical Book Read",
+                desc: "Pick up any real book nearby and read one solitary page with absolute, deliberate attention."
+            },
+            {
+                category: "Sensory",
+                duration: "30s",
+                title: "Sour Taste Reboot",
+                desc: "Taste a slice of lemon, lime, or sip a drop of apple cider vinegar. Sharp sour flavors produce an instant neuro-sensory circuit break."
+            },
+            {
+                category: "Physical",
+                duration: "45s",
+                title: "15 Deep Bodyweight Squats",
+                desc: "Drop into 15 steady squats with full range of motion. Pumping blood through your legs refreshes brain oxygenation."
+            },
+            {
+                category: "Somatic",
+                duration: "60s",
+                title: "Trapezius Tension Release",
+                desc: "Shrug your shoulders hard up to your ears, hold tight for 5 seconds, then drop them with a heavy breath. Repeat 4 times."
+            },
+            {
+                category: "Mindset",
+                duration: "45s",
+                title: "Send a Genuine Word of Thanks",
+                desc: "Send a brief 1-line text message expressing genuine gratitude to a friend, colleague, or family member."
+            },
+            {
+                category: "Hydration",
+                duration: "60s",
+                title: "Pinch of Salt & Water",
+                desc: "Add a microscopic pinch of sea salt to water and drink. Electrolyte balance quickly restores cellular communication."
+            },
+            {
+                category: "Focus",
+                duration: "60s",
+                title: "Define 1 Immediate Micro-Win",
+                desc: "Write down the single next 3-minute task you will complete as soon as you finish this reset session."
+            }
+        ];
+
+        /* --- 2. State & Persistent LocalStorage Management --- */
+        const STORAGE_KEY_LEVEL = 'breakTheLoop_level';
+        const STORAGE_KEY_LOOPS = 'breakTheLoop_totalLoops';
+
+        let currentLevel = parseInt(localStorage.getItem(STORAGE_KEY_LEVEL), 10) || 1;
+        let totalLoopsBroken = parseInt(localStorage.getItem(STORAGE_KEY_LOOPS), 10) || 0;
+        let isBoxOpen = false;
+
+        function saveState() {
+            localStorage.setItem(STORAGE_KEY_LEVEL, currentLevel);
+            localStorage.setItem(STORAGE_KEY_LOOPS, totalLoopsBroken);
+        }
+
+        function updateHeaderBadges() {
+            const badgeText = document.getElementById('levelBadgeText');
+            if (badgeText) {
+                badgeText.textContent = `⚡ Level ${currentLevel}`;
+            }
+
+            const boxTitle = document.getElementById('boxTitle');
+            if (boxTitle) {
+                boxTitle.textContent = `Tap to Open Mystery Box #${currentLevel}`;
+            }
+
+            const stepsHeading = document.getElementById('stepsHeading');
+            if (stepsHeading) {
+                stepsHeading.innerHTML = `Box #${currentLevel} Unlocked <span class="accent-icon">⚡</span>`;
+            }
+        }
+
+        /* --- 3. Apple-Style Web Audio Synthesizer (No external assets) --- */
+        class SoundFX {
+            constructor() {
+                this.ctx = null;
+            }
+
+            init() {
+                if (!this.ctx) {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    if (AudioContext) {
+                        this.ctx = new AudioContext();
+                    }
+                }
+                if (this.ctx && this.ctx.state === 'suspended') {
+                    this.ctx.resume();
+                }
+            }
+
+            playOpenChime() {
+                try {
+                    this.init();
+                    if (!this.ctx) return;
+                    const now = this.ctx.currentTime;
+
+                    // Ascending crystal chord (C5, E5, G5, B5, D6)
+                    const frequencies = [523.25, 659.25, 783.99, 987.77, 1174.66];
+                    frequencies.forEach((freq, idx) => {
+                        const osc = this.ctx.createOscillator();
+                        const gain = this.ctx.createGain();
+
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(freq, now + idx * 0.07);
+
+                        gain.gain.setValueAtTime(0, now + idx * 0.07);
+                        gain.gain.linearRampToValueAtTime(0.12, now + idx * 0.07 + 0.02);
+                        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.07 + 0.55);
+
+                        osc.connect(gain);
+                        gain.connect(this.ctx.destination);
+
+                        osc.start(now + idx * 0.07);
+                        osc.stop(now + idx * 0.07 + 0.6);
+                    });
+                } catch (e) {}
+            }
+
+            playPop() {
+                try {
+                    this.init();
+                    if (!this.ctx) return;
+                    const now = this.ctx.currentTime;
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(460, now);
+                    osc.frequency.exponentialRampToValueAtTime(920, now + 0.08);
+
+                    gain.gain.setValueAtTime(0.1, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+
+                    osc.start(now);
+                    osc.stop(now + 0.12);
+                } catch (e) {}
+            }
+        }
+        const sfx = new SoundFX();
+
+        /* --- 4. Interactive 3D Card Tilt & Glare Tracking --- */
+        const box = document.getElementById('mysteryBox');
+
+        if (box) {
+            box.addEventListener('mousemove', (e) => {
+                if (isBoxOpen) return;
+                const rect = box.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -10;
+                const rotateY = ((x - centerX) / centerX) * 10;
+
+                box.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+                
+                box.style.setProperty('--mouse-x', `${(x / rect.width) * 100}%`);
+                box.style.setProperty('--mouse-y', `${(y / rect.height) * 100}%`);
+            });
+
+            box.addEventListener('mouseleave', () => {
+                if (isBoxOpen) return;
+                box.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            });
+
+            // Keyboard navigation
+            box.addEventListener('keydown', (e) => {
+                if ((e.key === 'Enter' || e.key === ' ') && !isBoxOpen) {
+                    e.preventDefault();
+                    openBox(e);
+                }
+            });
+        }
+
+        /* --- 5. Neon Particle Burst & Dark Confetti Engine --- */
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationFrameId = null;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class DarkParticle {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 9 + 4;
+                this.vx = Math.cos(angle) * speed;
+                this.vy = Math.sin(angle) * speed - 3;
+                this.size = Math.random() * 6 + 3;
+                
+                // Neon glow palette
+                const colors = ['#00f2fe', '#0071e3', '#9d4edd', '#10b981', '#f43f5e', '#fbbf24'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+                this.alpha = 1;
+                this.decay = Math.random() * 0.022 + 0.014;
+                this.gravity = 0.24;
+                this.rotation = Math.random() * Math.PI;
+                this.rotSpeed = (Math.random() - 0.5) * 0.25;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.vy += this.gravity;
+                this.vx *= 0.97;
+                this.rotation += this.rotSpeed;
+                this.alpha -= this.decay;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = Math.max(0, this.alpha);
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.rotation);
+                ctx.fillStyle = this.color;
+                ctx.shadowColor = this.color;
+                ctx.shadowBlur = 10;
+                ctx.beginPath();
+                ctx.roundRect(-this.size / 2, -this.size / 2, this.size, this.size * 1.6, 2);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        function triggerParticleBurst(originX, originY) {
+            for (let i = 0; i < 70; i++) {
+                particles.push(new DarkParticle(originX, originY));
+            }
+
+            if (!animationFrameId) {
+                renderParticles();
+            }
+        }
+
+        function renderParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const p = particles[i];
+                p.update();
+                p.draw();
+                if (p.alpha <= 0) {
+                    particles.splice(i, 1);
+                }
+            }
+
+            if (particles.length > 0) {
+                animationFrameId = requestAnimationFrame(renderParticles);
+            } else {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                animationFrameId = null;
+            }
+        }
+
+        /* --- 6. Step Generation & Box Mechanics --- */
+        function getRandomInstructions(count) {
+            const shuffled = [...actionPool].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        function openBox(event) {
+            if (isBoxOpen) return;
+            isBoxOpen = true;
+
+            sfx.playOpenChime();
+
+            // Calculate burst origin
+            const rect = box.getBoundingClientRect();
+            const originX = event ? (event.clientX || (rect.left + rect.width / 2)) : (rect.left + rect.width / 2);
+            const originY = event ? (event.clientY || (rect.top + rect.height / 2)) : (rect.top + rect.height / 2);
+            
+            triggerParticleBurst(originX, originY);
+
+            // Add dramatic unboxing animation
+            box.classList.add('box-opening');
+
+            setTimeout(() => {
+                const boxOuter = document.getElementById('boxContainerOuter');
+                const stepsContainer = document.getElementById('stepsContainer');
+
+                boxOuter.style.display = 'none';
+                box.classList.remove('box-opening');
+                box.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+
+                renderSteps();
+
+                stepsContainer.classList.add('is-visible');
+            }, 490);
+        }
+
+        let completedItems = 0;
+
+        function renderSteps() {
+            const stepsList = document.getElementById('stepsList');
+            const randomSteps = getRandomInstructions(5);
+            completedItems = 0;
+            updateCompletionTracker();
+
+            stepsList.innerHTML = randomSteps.map((step, index) => `
+                <article class="step-item" onclick="toggleStepCompletion(this)" role="checkbox" aria-checked="false" tabindex="0">
+                    <div class="step-checkbox" aria-hidden="true">✓</div>
+                    <div class="step-content">
+                        <div class="step-meta">
+                            <span class="step-category">${step.category}</span>
+                            <span class="step-duration">⏱ ${step.duration}</span>
+                        </div>
+                        <h3 class="step-title">Step ${index + 1}: ${step.title}</h3>
+                        <p class="step-desc">${step.desc}</p>
+                    </div>
+                </article>
+            `).join('');
+
+            // Keydown listeners for accessibility
+            const stepElements = stepsList.querySelectorAll('.step-item');
+            stepElements.forEach(el => {
+                el.addEventListener('keydown', (e) => {
+                    if (e.key === ' ' || e.key === 'Enter') {
+                        e.preventDefault();
+                        toggleStepCompletion(el);
+                    }
+                });
+            });
+        }
+
+        function toggleStepCompletion(element) {
+            const isCompleted = element.classList.toggle('is-completed');
+            element.setAttribute('aria-checked', isCompleted ? "true" : "false");
+            
+            sfx.playPop();
+
+            if (isCompleted) {
+                completedItems++;
+            } else {
+                completedItems--;
+            }
+            updateCompletionTracker();
+        }
+
+        function updateCompletionTracker() {
+            const countEl = document.getElementById('completedCount');
+            const statusEl = document.getElementById('completionStatus');
+            if (countEl) countEl.textContent = completedItems;
+
+            if (statusEl) {
+                if (completedItems === 5) {
+                    statusEl.style.background = 'rgba(16, 185, 129, 0.25)';
+                    statusEl.style.borderColor = 'rgba(16, 185, 129, 0.7)';
+                    statusEl.style.color = '#34d399';
+                    statusEl.innerHTML = '🎉 All 5 Done!';
+                } else {
+                    statusEl.style.background = 'rgba(16, 185, 129, 0.12)';
+                    statusEl.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+                    statusEl.style.color = '#34d399';
+                    statusEl.innerHTML = `<span id="completedCount">${completedItems}</span>/5 Done`;
+                }
+            }
+        }
+
+        /* --- 7. Endless Gamified Loop Transition --- */
+        function prepareNextBox() {
+            sfx.playPop();
+
+            currentLevel++;
+            totalLoopsBroken++;
+            saveState();
+
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            const boxOuter = document.getElementById('boxContainerOuter');
+            const stepsContainer = document.getElementById('stepsContainer');
+
+            // Fade out steps
+            stepsContainer.classList.remove('is-visible');
+
+            setTimeout(() => {
+                isBoxOpen = false;
+                updateHeaderBadges();
+
+                // Display fresh unopened Mystery Box
+                boxOuter.style.display = 'flex';
+                box.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            }, 260);
+        }
+
+        /* --- 8. Level Reset Mechanism & Home Navigation --- */
+        function resetToLevelOne() {
+            // Reset level and stats back to initial state
+            currentLevel = 1;
+            totalLoopsBroken = 0;
+
+            // Clear saved streak and level from localStorage
+            localStorage.removeItem(STORAGE_KEY_LEVEL);
+            localStorage.removeItem(STORAGE_KEY_LOOPS);
+
+            isBoxOpen = false;
+            completedItems = 0;
+
+            const boxOuter = document.getElementById('boxContainerOuter');
+            const stepsContainer = document.getElementById('stepsContainer');
+
+            // Hide steps container
+            if (stepsContainer) {
+                stepsContainer.classList.remove('is-visible');
+            }
+
+            // Dynamically update UI badges & titles back to Level 1 - Loop Reset
+            updateHeaderBadges();
+
+            // Restore unopened Mystery Box #1 card
+            if (boxOuter) {
+                boxOuter.style.display = 'flex';
+            }
+            if (box) {
+                box.classList.remove('box-opening');
+                box.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            }
+
+            // Audio feedback and smooth scroll to top
+            sfx.playPop();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function resetProgressPrompt() {
+            if (confirm("Reset your unlocked Level and streak data back to Level 1?")) {
+                resetToLevelOne();
+            }
+        }
+
+        // Clicking main Break The Loop title resets level to 1 and clears localStorage
+        function navigateToHome() {
+            resetToLevelOne();
+        }
+
+        // Initialize badges on load
+        updateHeaderBadges();
+    </script>
+</body>
+</html>
