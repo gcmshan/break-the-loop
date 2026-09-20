@@ -1097,151 +1097,154 @@
          JavaScript Engine: State, Actions, Audio & Canvas Particles
     -------------------------------------------------------------- -->
     <script>
-        /* --- 1. Scientific Habit Reset Action Pool (25 Actions) --- */
+        /* --- 1. Scientific PMO Recovery Action Pool (Categorized by Neurological Mechanism) --- */
         const actionPool = [
-            {
-                category: "Somatic Breath",
-                duration: "60s",
-                title: "Double-Inhale Physiological Sigh",
-                desc: "Take two deep nasal inhales back-to-back, followed by an extended, audible mouth exhale. Repeat 5 times to immediately lower autonomic arousal."
-            },
-            {
-                category: "Sensory Scan",
-                duration: "90s",
-                title: "The 5-4-3-2-1 Sensory Grounding",
-                desc: "Anchor yourself: notice 5 things you can see, 4 you can physically feel, 3 you can hear, 2 you can smell, and 1 you can taste."
-            },
+            /* --- Category 1: Sensory Shock --- */
             {
                 category: "Sensory Shock",
                 duration: "30s",
                 title: "Cold Water Face Splash",
-                desc: "Splash freezing cold water across your eyes, forehead, and temples 5 times. Instantly triggers the mammalian dive reflex to crash heart rate and acute arousal."
+                desc: "Splash freezing cold water across your eyes, forehead, and temples 5 times. Instantly triggers the mammalian dive reflex to drop heart rate and crash acute sexual arousal."
             },
             {
-                category: "Urge Surfing",
-                duration: "90s",
-                title: "Urge Surfing (The 90-Second Wave)",
-                desc: "Observe the physical craving in your chest and stomach without reacting. Acute dopamine cravings peak within 90-180 seconds and naturally collapse if not fed."
+                category: "Sensory Shock",
+                duration: "45s",
+                title: "Ice Cube Palm Grip",
+                desc: "Grip an ice cube firmly in your palm until it melts. Sharp thermal cold stimulation floods tactile nerves, immediately grounding compulsive runaway thoughts."
             },
             {
-                category: "Physical Shock",
+                category: "Sensory Shock",
+                duration: "30s",
+                title: "Sharp Sour Citrus Shock",
+                desc: "Bite a slice of lemon, lime, or sip a drop of apple cider vinegar. Intense sour stimulation activates cranial nerves to produce an instant sensory circuit break."
+            },
+            {
+                category: "Sensory Shock",
+                duration: "30s",
+                title: "Peppermint Sensory Blast",
+                desc: "Chew strong peppermint gum or brush teeth with icy mint paste. Powerful menthol stimulates trigeminal cold receptors, abruptly snapping mental fixation."
+            },
+
+            /* --- Category 2: Somatic / Physical Jolt --- */
+            {
+                category: "Somatic / Physical Jolt",
                 duration: "45s",
                 title: "15-20 Explosive Push-ups",
-                desc: "Drop immediately and perform 15-20 fast push-ups. Intense physical exertion rapidly redirects blood flow away from arousal centers to large muscle groups."
+                desc: "Drop immediately and perform 15 to 20 fast push-ups. Intense physical exertion rapidly shunts blood flow away from pelvic arousal centers to large muscle groups."
             },
             {
-                category: "Urge Defense",
-                duration: "60s",
-                title: "Phone & Device Quarantine",
-                desc: "Place your phone face down in another room or step away from your computer right now. Eliminating immediate screen proximity breaks 90% of PMO relapses."
-            },
-            {
-                category: "Vision Reset",
-                duration: "60s",
-                title: "Far-Horizon Panoramic Gaze",
-                desc: "Look out a window at the furthest horizon or treetop for 60 seconds without focusing on any single point. Relaxes optic nerve tension."
-            },
-            {
-                category: "Environment",
-                duration: "1 min",
-                title: "The 3-Item Clutter Purge",
-                desc: "Pick up and put away exactly 3 items cluttering your desk. Restoring local visual harmony creates instantaneous cognitive clarity."
-            },
-            {
-                category: "Physical",
+                category: "Somatic / Physical Jolt",
                 duration: "45s",
-                title: "Isometric Wall-Sit Burnout",
-                desc: "Sink into a 90-degree wall sit. Hold until your quadriceps shake. Intense somatic sensations override impulsive daydreaming."
+                title: "20 High Jumping Jacks",
+                desc: "Execute 20 rapid, explosive jumps. Aerobic exertion burns off restless autonomic adrenaline and forces the prefrontal cortex back into command."
             },
             {
-                category: "Cognitive",
+                category: "Somatic / Physical Jolt",
                 duration: "60s",
-                title: "Urge Exorcism on Paper",
-                desc: "Write down the exact craving or urge you feel right now in 5 words on physical paper, crumble it tightly, and discard it."
+                title: "60s Isometric Wall Sit",
+                desc: "Sink into a 90-degree wall sit and hold until your quadriceps burn. Intense muscular resistance grounds runaway dopamine cravings into pure physical endurance."
             },
             {
-                category: "Physical",
-                duration: "45s",
-                title: "20 Fast Jumping Jacks",
-                desc: "Spike your heart rate with 20 quick jumps. Aerobic bursts jolt the prefrontal cortex back into active command."
-            },
-            {
-                category: "Sensory",
-                duration: "30s",
-                title: "Strong Peppermint Reset",
-                desc: "Chew a strong mint gum, drink mint tea, or brush your teeth with mint toothpaste to stimulate the trigeminal nerve."
-            },
-            {
-                category: "Somatic Breath",
-                duration: "60s",
-                title: "Box Breathing (4-4-4-4)",
-                desc: "Inhale 4s, hold full 4s, exhale 4s, hold empty 4s. Used by tactical operators to bring down acute nervous excitation."
-            },
-            {
-                category: "Environment",
-                duration: "45s",
-                title: "Full Window Air Flush",
-                desc: "Open your window wide and draw in 5 slow breaths of cold outdoor air to displace stagnant carbon dioxide buildup."
-            },
-            {
-                category: "Posture",
-                duration: "60s",
-                title: "Chest Opener & Overhead Reach",
-                desc: "Interlace your fingers behind your back, pull shoulders down and back, and lift your chin gently for 3 slow breaths."
-            },
-            {
-                category: "Focus",
-                duration: "60s",
-                title: "Phone Physical Quarantine",
-                desc: "Put your phone facedown inside a drawer or in another room. Eliminate the sensory proximity that triggers auto-pilot loops."
-            },
-            {
-                category: "Physical",
+                category: "Somatic / Physical Jolt",
                 duration: "60s",
                 title: "Solid Plank Core Lock",
-                desc: "Hold a forearm plank with glutes squeezed and navel pulled in tight for 45 to 60 seconds."
+                desc: "Lock into a rigid forearm plank with glutes squeezed and navel pulled in tight for 45-60 seconds. Full-body somatic tension breaks urge fixation."
             },
             {
-                category: "Mindset",
-                duration: "45s",
-                title: "1-Page Physical Book Read",
-                desc: "Pick up any real book nearby and read one solitary page with absolute, deliberate attention."
-            },
-            {
-                category: "Sensory",
-                duration: "30s",
-                title: "Sour Taste Reboot",
-                desc: "Taste a slice of lemon, lime, or sip a drop of apple cider vinegar. Sharp sour flavors produce an instant neuro-sensory circuit break."
-            },
-            {
-                category: "Physical",
+                category: "Somatic / Physical Jolt",
                 duration: "45s",
                 title: "15 Deep Bodyweight Squats",
-                desc: "Drop into 15 steady squats with full range of motion. Pumping blood through your legs refreshes brain oxygenation."
+                desc: "Perform 15 deliberate squats with full depth. Pumping oxygenated blood through your legs clears sudden obsessive craving spikes."
             },
+
+            /* --- Category 3: Environmental Distance --- */
             {
-                category: "Somatic",
+                category: "Environmental Distance",
                 duration: "60s",
-                title: "Trapezius Tension Release",
-                desc: "Shrug your shoulders hard up to your ears, hold tight for 5 seconds, then drop them with a heavy breath. Repeat 4 times."
+                title: "Physical Phone Quarantine",
+                desc: "Put your phone facedown in another room or across the hallway right now. Breaking immediate device proximity neutralizes 90% of compulsive PMO relapse triggers."
             },
             {
-                category: "Mindset",
+                category: "Environmental Distance",
+                duration: "60s",
+                title: "Immediate Room Switch",
+                desc: "Stand up instantly and walk into a different room, open hallway, or balcony. Changing physical geometry short-circuits isolated environmental cues."
+            },
+            {
+                category: "Environmental Distance",
+                duration: "1 min",
+                title: "The 3-Item Desk Purge",
+                desc: "Stand up and put away exactly 3 items cluttering your desk or immediate area. Eliminating local visual chaos creates instant cognitive order."
+            },
+            {
+                category: "Environmental Distance",
+                duration: "45s",
+                title: "Full Window Fresh Air Flush",
+                desc: "Open your nearest window wide and draw in 5 slow breaths of cold outdoor air. Purging stagnant CO2 and breaking room confinement clears mental fixation."
+            },
+
+            /* --- Category 4: Parasympathetic / Vagus Reset --- */
+            {
+                category: "Parasympathetic / Vagus Reset",
+                duration: "60s",
+                title: "Double-Inhale Physiological Sigh",
+                desc: "Take two deep nasal inhales back-to-back, followed by an extended, audible mouth exhale. Repeat 5 times to engage the vagal brake on acute arousal."
+            },
+            {
+                category: "Parasympathetic / Vagus Reset",
+                duration: "60s",
+                title: "Far-Horizon Panoramic Gaze",
+                desc: "Look out a window at the furthest visible horizon or treetop for 60s without focusing on one spot. Panoramic vision instantly disengages stress tunnel-vision."
+            },
+            {
+                category: "Parasympathetic / Vagus Reset",
+                duration: "90s",
+                title: "4-7-8 Parasympathetic Breathing",
+                desc: "Inhale quietly through your nose for 4s, hold your breath for 7s, and exhale completely through your mouth for 8s. Repeat 4 cycles to lower sympathetic drive."
+            },
+            {
+                category: "Parasympathetic / Vagus Reset",
+                duration: "45s",
+                title: "Standing Spinal Forward Fold",
+                desc: "Hinge forward at your hips, let your head, neck, and arms hang limp like a ragdoll toward the floor, taking 4 slow decompression breaths."
+            },
+            {
+                category: "Parasympathetic / Vagus Reset",
+                duration: "45s",
+                title: "Hydration & Pinch of Salt",
+                desc: "Drink 300ml of cold water with a microscopic pinch of salt. Dehydration triggers cellular distress frequently misread by the brain as dopamine cravings."
+            },
+
+            /* --- Category 5: Cognitive Interruption --- */
+            {
+                category: "Cognitive Interruption",
+                duration: "60s",
+                title: "Urge Exorcism on Paper",
+                desc: "Write down the exact trigger or urge you feel right now in 5 words on paper, crumple it tightly, and discard it. Externalizing disempowers compulsive craving."
+            },
+            {
+                category: "Cognitive Interruption",
+                duration: "90s",
+                title: "Urge Surfing (The 90-Second Wave)",
+                desc: "Close your eyes and observe the physical sensation of the urge like an ocean wave without fighting it. Cravings naturally crest and collapse within 90-180s if unreacted."
+            },
+            {
+                category: "Cognitive Interruption",
+                duration: "60s",
+                title: "100-to-7 Backward Math",
+                desc: "Count backwards from 100 by sevens (100, 93, 86, 79, 72...) out loud. Heavy working-memory arithmetic forces prefrontal activation, starving emotional craving networks."
+            },
+            {
+                category: "Cognitive Interruption",
                 duration: "45s",
                 title: "Send a Genuine Word of Thanks",
-                desc: "Send a brief 1-line text message expressing genuine gratitude to a friend, colleague, or family member."
+                desc: "Send a brief 1-line text thanking a friend, parent, or colleague. Social connection activates oxytocin circuits, muting isolated dopamine-seeking loops."
             },
             {
-                category: "Hydration",
-                duration: "60s",
-                title: "Pinch of Salt & Water",
-                desc: "Add a microscopic pinch of sea salt to water and drink. Electrolyte balance quickly restores cellular communication."
-            },
-            {
-                category: "Focus",
+                category: "Cognitive Interruption",
                 duration: "60s",
                 title: "Define 1 Immediate Micro-Win",
-                desc: "Write down the single next 3-minute task you will complete as soon as you finish this reset session."
+                desc: "Write down the single 5-minute productive task you will begin immediately once this box is completed. Shifts brain state from craving to constructive execution."
             }
         ];
 
@@ -1468,10 +1471,61 @@
             }
         }
 
-        /* --- 6. Step Generation & Box Mechanics --- */
-        function getRandomInstructions(count) {
-            const shuffled = [...actionPool].sort(() => 0.5 - Math.random());
-            return shuffled.slice(0, count);
+        /* --- 6. Step Generation & Strict Deduplication Engine --- */
+        const PMO_CATEGORIES = [
+            "Sensory Shock",
+            "Somatic / Physical Jolt",
+            "Environmental Distance",
+            "Parasympathetic / Vagus Reset",
+            "Cognitive Interruption"
+        ];
+
+        // Track items from the previous box to prevent immediate repetition across rounds
+        let previousBoxTitles = new Set();
+
+        function getRandomInstructions(count = 5) {
+            // Group the actions pool by category
+            const categoryBuckets = {};
+            PMO_CATEGORIES.forEach(cat => {
+                categoryBuckets[cat] = actionPool.filter(action => action.category === cat);
+            });
+
+            // Randomize category sequence so the order varies naturally across boxes
+            const shuffledCategoryOrder = [...PMO_CATEGORIES].sort(() => 0.5 - Math.random());
+
+            const selectedSteps = [];
+            const selectedCategories = new Set();
+            const currentBoxTitles = new Set();
+
+            for (const category of shuffledCategoryOrder) {
+                // Strict check: skip if category is already represented in this box
+                if (selectedCategories.has(category)) continue;
+
+                const bucket = categoryBuckets[category] || [];
+                if (bucket.length === 0) continue;
+
+                // Priority: select an action not shown in the immediately preceding box
+                let freshCandidates = bucket.filter(item => !previousBoxTitles.has(item.title));
+                if (freshCandidates.length === 0) {
+                    freshCandidates = bucket;
+                }
+
+                // Random selection within category bucket
+                const chosen = freshCandidates[Math.floor(Math.random() * freshCandidates.length)];
+
+                if (chosen && !currentBoxTitles.has(chosen.title)) {
+                    selectedSteps.push(chosen);
+                    selectedCategories.add(category);
+                    currentBoxTitles.add(chosen.title);
+                }
+
+                if (selectedSteps.length >= count) break;
+            }
+
+            // Save titles for next box cross-round freshness
+            previousBoxTitles = currentBoxTitles;
+
+            return selectedSteps;
         }
 
         function openBox(event) {
